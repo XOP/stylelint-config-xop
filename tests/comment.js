@@ -6,7 +6,7 @@ var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './[FILE_NAME].scss'),
+    files: path.resolve(__dirname, './comment.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
@@ -19,17 +19,22 @@ function contains(hay, needle) {
 }
 
 
-test('TEST', function (t) {
+test('comment', function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
             t.comment('\n');
-            t.comment('TEST:');
+            t.comment('comment:');
             t.comment('--------------------------------------------');
 
             t.ok(
-                contains(data.output, 'RULE') === 2,
-                'RULE'
+                contains(data.output, 'comment-empty-line-before') === 1,
+                'comment-empty-line-before'
+            );
+
+            t.ok(
+                contains(data.output, 'comment-whitespace-inside') === 2,
+                'comment-whitespace-inside'
             );
         })
         .catch(function (err) {

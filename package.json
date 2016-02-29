@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-xop",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "description": "shareable stylelint configuration",
   "directories": {
     "test": "tests"
@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/XOP/stylelint-config-xop#readme",
   "devDependencies": {
+    "node-sass": "^3.4.2",
     "stylelint": "^4.4.0",
     "stylelint-formatter-yhw": "^1.1.0",
     "tape": "^4.4.0"
