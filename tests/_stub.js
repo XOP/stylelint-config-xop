@@ -6,7 +6,7 @@ var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './at-rule.scss'),
+    files: path.resolve(__dirname, './[FILE_NAME].scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
@@ -19,22 +19,12 @@ function contains(hay, needle) {
 }
 
 
-test('at-rule', function (t) {
+test('TEST', function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
-
-            t.comment('\n');
-            t.comment('at-rule:');
-            t.comment('--------------------------------------------');
-
             t.ok(
-                contains(data.output, 'at-rule-empty-line-before') === 2,
-                'at-rule-empty-line-before'
-            );
-
-            t.ok(
-                contains(data.output, 'at-rule-no-vendor-prefix') === 1,
-                'at-rule-no-vendor-prefix'
+                contains(data.output, 'RULE') === 2,
+                'RULE'
             );
         })
         .catch(function (err) {
