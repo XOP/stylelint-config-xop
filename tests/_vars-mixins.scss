@@ -1,0 +1,9 @@
+$color: black;
+$bg-color: white;
+
+$font-size: 1rem;
+$line-height: 1.5;
+
+@mixin mixin(){
+    @content;
+}

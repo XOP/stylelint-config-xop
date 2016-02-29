@@ -1,0 +1,36 @@
+{
+  "name": "stylelint-config-xop",
+  "version": "0.0.1",
+  "description": "shareable stylelint configuration",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "node tests",
+    "lint": "node tests/syntax-formatting.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/XOP/stylelint-config-xop.git"
+  },
+  "keywords": [
+    "stylelint",
+    "scss",
+    "config",
+    "linting"
+  ],
+  "author": "Evgeny Khoroshilov <stewiekillsloiss@gmail.com> (https://github.com/XOP)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/XOP/stylelint-config-xop/issues"
+  },
+  "homepage": "https://github.com/XOP/stylelint-config-xop#readme",
+  "devDependencies": {
+    "stylelint": "^4.4.0",
+    "stylelint-formatter-yhw": "^1.1.0",
+    "tape": "^4.4.0"
+  },
+  "dependencies": {
+    "stylelint-config-standard": "^3.0.0"
+  }
+}
