@@ -1,35 +1,30 @@
+var TEST_NAME = 'time';
+
 var path = require('path');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './max.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-
-test('TEST', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('max:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, 'max-empty-lines') === 2,
-                'max-empty-lines'
+                helpers.contains(data.output, 'time-no-imperceptible') === 1,
+                'time-no-imperceptible'
             );
         })
         .catch(function (err) {
@@ -38,4 +33,3 @@ test('TEST', function (t) {
 
     t.end();
 });
-

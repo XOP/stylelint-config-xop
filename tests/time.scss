@@ -4,20 +4,13 @@
 // YES
 // -------------------------------------------------------
 
-div {
-    color: $color;
-}
-
-// NO
-// -------------------------------------------------------
-
-main {
-  background: $bg-color;
+section {
+    transition: color .2s ease;
 }
 
 // NO
 // -------------------------------------------------------
 
 section {
-background: $bg-color;
+    transition: color .1s ease;
 }

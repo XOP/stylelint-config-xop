@@ -1,13 +1,16 @@
+var TEST_NAME = 'color';
+
 var path = require('path');
 var fs = require('fs');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './color.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
@@ -29,32 +32,25 @@ var stylelintOptionsCss = {
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-test('color', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('color:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, 'color-hex-case') === 1,
+                helpers.contains(data.output, 'color-hex-case') === 1,
                 'color-hex-case'
             );
 
             t.ok(
-                contains(data.output, 'color-hex-length') === 1,
+                helpers.contains(data.output, 'color-hex-length') === 1,
                 'color-hex-length'
             );
 
             t.ok(
-                contains(data.output, 'color-no-named') === 1,
+                helpers.contains(data.output, 'color-no-named') === 1,
                 'color-no-named'
             );
         })
@@ -70,7 +66,7 @@ test('color', function (t) {
             t.comment('--------------------------------------------');
 
             t.ok(
-                contains(data.output, 'color-no-invalid-hex') === 1,
+                helpers.contains(data.output, 'color-no-invalid-hex') === 1,
                 'color-no-invalid-hex'
             );
         })
@@ -80,4 +76,3 @@ test('color', function (t) {
 
     t.end();
 });
-

@@ -1,4 +1,4 @@
-var TEST_NAME = 'font';
+var TEST_NAME = 'general';
 
 var path = require('path');
 
@@ -22,14 +22,26 @@ test(TEST_NAME, function (t) {
 
             helpers.title(TEST_NAME);
 
+            helpers.debug(data);
+
             t.ok(
-                helpers.contains(data.output, 'font-family-name-quotes') === 3,
-                'font-family-name-quotes'
+                helpers.contains(data.output, ' (indentation)') === 2, // tricky here due to naming
+                'indentation'
             );
 
             t.ok(
-                helpers.contains(data.output, 'font-weight-notation') === 1,
-                'font-weight-notation'
+                helpers.contains(data.output, 'max-empty-lines') === 2,
+                'max-empty-lines'
+            );
+
+            t.ok(
+                helpers.contains(data.output, 'no-duplicate-selectors') === 2,
+                'no-duplicate-selectors'
+            );
+
+            t.ok(
+                helpers.contains(data.output, 'no-unknown-animations') === 3,
+                'no-unknown-animations'
             );
         })
         .catch(function (err) {

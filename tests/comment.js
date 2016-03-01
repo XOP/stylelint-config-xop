@@ -1,39 +1,34 @@
+var TEST_NAME = 'comment';
+
 var path = require('path');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './comment.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-
-test('comment', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('comment:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, 'comment-empty-line-before') === 1,
+                helpers.contains(data.output, 'comment-empty-line-before') === 1,
                 'comment-empty-line-before'
             );
 
             t.ok(
-                contains(data.output, 'comment-whitespace-inside') === 2,
+                helpers.contains(data.output, 'comment-whitespace-inside') === 2,
                 'comment-whitespace-inside'
             );
         })
@@ -43,4 +38,3 @@ test('comment', function (t) {
 
     t.end();
 });
-

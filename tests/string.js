@@ -1,35 +1,30 @@
+var TEST_NAME = 'string';
+
 var path = require('path');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './indentation.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-
-test('indentation', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('indentation:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, ' (indentation)') === 2, // tricky here due to naming
-                'indentation'
+                helpers.contains(data.output, 'string-quotes') === 2,
+                'string-quotes'
             );
         })
         .catch(function (err) {
@@ -38,4 +33,3 @@ test('indentation', function (t) {
 
     t.end();
 });
-

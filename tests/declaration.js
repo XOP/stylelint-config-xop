@@ -1,74 +1,69 @@
+var TEST_NAME = 'declaration';
+
 var path = require('path');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './declaration.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-
-test('declaration', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('declaration:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, 'declaration-bang-space-after') === 1,
+                helpers.contains(data.output, 'declaration-bang-space-after') === 1,
                 'declaration-bang-space-after'
             );
 
             t.ok(
-                contains(data.output, 'declaration-bang-space-before') === 2,
+                helpers.contains(data.output, 'declaration-bang-space-before') === 2,
                 'declaration-bang-space-before'
             );
 
             t.ok(
-                contains(data.output, 'declaration-block-no-single-line') === 2,
+                helpers.contains(data.output, 'declaration-block-no-single-line') === 2,
                 'declaration-block-no-single-line'
             );
 
             t.ok(
-                contains(data.output, 'declaration-block-semicolon-newline-after') === 2,
+                helpers.contains(data.output, 'declaration-block-semicolon-newline-after') === 2,
                 'declaration-block-semicolon-newline-after'
             );
 
             t.ok(
-                contains(data.output, 'declaration-block-semicolon-newline-before') === 2,
+                helpers.contains(data.output, 'declaration-block-semicolon-newline-before') === 2,
                 'declaration-block-semicolon-newline-before'
             );
 
             t.ok(
-                contains(data.output, 'declaration-block-semicolon-space-before') === 2,
+                helpers.contains(data.output, 'declaration-block-semicolon-space-before') === 2,
                 'declaration-block-semicolon-space-before'
             );
 
             t.ok(
-                contains(data.output, 'declaration-colon-newline-after') === 1,
+                helpers.contains(data.output, 'declaration-colon-newline-after') === 1,
                 'declaration-colon-newline-after'
             );
 
             t.ok(
-                contains(data.output, 'declaration-colon-space-after') === 2,
+                helpers.contains(data.output, 'declaration-colon-space-after') === 2,
                 'declaration-colon-space-after'
             );
 
             t.ok(
-                contains(data.output, 'declaration-colon-space-before') === 1,
+                helpers.contains(data.output, 'declaration-colon-space-before') === 1,
                 'declaration-colon-space-before'
             );
         })
@@ -78,4 +73,3 @@ test('declaration', function (t) {
 
     t.end();
 });
-

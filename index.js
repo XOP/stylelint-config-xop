@@ -81,12 +81,11 @@ var config = {
         //"media-query-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
         //"media-query-parentheses-space-inside": "always"|"never",
 
-        //"no-browser-hacks": true,
-        //"no-duplicate-selectors": true,
-        //"no-eol-whitespace": true,
-        //"no-invalid-double-slash-comments": true,
-        //"no-missing-eof-newline": true,
-        //"no-unknown-animations": true,
+        "no-duplicate-selectors": true,
+        "no-eol-whitespace": true,
+        ////"no-invalid-double-slash-comments": true,
+        "no-missing-eof-newline": true,
+        "no-unknown-animations": true,
 
         //"number-leading-zero": "always"|"never",
         //"number-max-precision": int,
@@ -124,13 +123,12 @@ var config = {
         //"selector-pseudo-element-colon-notation": true,
         //"selector-root-no-composition": true,
 
-        //"string-no-newline": true,
-        //"string-quotes": true,
+        "string-quotes": "double",
 
-        //"time-no-imperceptible": true,
+        "time-no-imperceptible": true,
 
-        //"unit-blacklist": string|[],
-        //"unit-whitelist": string|[],
+        ////"unit-blacklist": [],
+        ////"unit-whitelist": ["%", "deg", "em", "px", "rem", "s", "vh", "vw"],
 
         //"value-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
         //"value-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",

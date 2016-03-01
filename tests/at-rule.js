@@ -1,39 +1,34 @@
+var TEST_NAME = 'at-rule';
+
 var path = require('path');
 
 var test = require('tape');
+var helpers = require('./_helpers');
 
 var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './at-rule.scss'),
+    files: path.resolve(__dirname, './' + TEST_NAME + '.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
 };
 
-function contains(hay, needle) {
-    var regExp = new RegExp(needle, 'gm');
 
-    return hay.match(regExp) && hay.match(regExp).length;
-}
-
-
-test('at-rule', function (t) {
+test(TEST_NAME, function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
-            t.comment('\n');
-            t.comment('at-rule:');
-            t.comment('--------------------------------------------');
+            helpers.title(TEST_NAME);
 
             t.ok(
-                contains(data.output, 'at-rule-empty-line-before') === 2,
+                helpers.contains(data.output, 'at-rule-empty-line-before') === 2,
                 'at-rule-empty-line-before'
             );
 
             t.ok(
-                contains(data.output, 'at-rule-no-vendor-prefix') === 1,
+                helpers.contains(data.output, 'at-rule-no-vendor-prefix') === 1,
                 'at-rule-no-vendor-prefix'
             );
         })
@@ -43,4 +38,3 @@ test('at-rule', function (t) {
 
     t.end();
 });
-
