@@ -60,7 +60,20 @@ test('declaration', function (t) {
                 'declaration-block-semicolon-space-before'
             );
 
+            t.ok(
+                contains(data.output, 'declaration-colon-newline-after') === 1,
+                'declaration-colon-newline-after'
+            );
 
+            t.ok(
+                contains(data.output, 'declaration-colon-space-after') === 2,
+                'declaration-colon-space-after'
+            );
+
+            t.ok(
+                contains(data.output, 'declaration-colon-space-before') === 1,
+                'declaration-colon-space-before'
+            );
         })
         .catch(function (err) {
             console.error(err.stack);

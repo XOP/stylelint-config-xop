@@ -43,10 +43,10 @@ var config = {
         "declaration-block-semicolon-space-before": "never",
         ////"declaration-block-single-line-max-declarations": int,
 
-        //"declaration-colon-newline-after": "always"|"always-multi-line",
-        //"declaration-colon-space-after": "always"|"never"|"always-single-line",
-        //"declaration-colon-space-before": "always"|"never",
-        //"declaration-no-important": true,
+        "declaration-colon-newline-after": "always-multi-line",
+        "declaration-colon-space-after": "always-single-line",
+        "declaration-colon-space-before": "never",
+        ////"declaration-no-important": true,
 
         //"font-family-name-quotes": "single-where-required"|"single-where-recommended"|"single-unless-keyword"|"double-where-required"|"double-where-recommended"|"double-unless-keyword",
         //"font-weight-notation": "numeric"|"named",
