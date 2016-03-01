@@ -4,4 +4,6 @@ require('./color');
 require('./comment');
 require('./declaration');
 require('./font');
+require('./function');
 require('./indentation');
+require('./max');

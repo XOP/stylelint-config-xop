@@ -48,26 +48,27 @@ var config = {
         "declaration-colon-space-before": "never",
         ////"declaration-no-important": true,
 
-        "font-family-name-quotes": "single-where-recommended",
+        "font-family-name-quotes": "double-where-recommended",
         "font-weight-notation": "named",
 
-        //"function-blacklist": string|[],
-        //"function-calc-no-unspaced-operator": true,
-        //"function-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
-        //"function-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
-        //"function-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
-        //"function-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-        //"function-linear-gradient-no-nonstandard-direction": true,
-        //"function-parentheses-newline-inside": "always"|"always-multi-line"|"never-multi-line",
-        //"function-parentheses-space-inside": "always"|"never"|"always-single-line"|"never-single-line",
-        //"function-url-quotes": "single"|"double"|"none",
-        //"function-whitelist": string|[],
-        //"function-whitespace-after": "always"|"never",
+        ////"function-blacklist": string|[],
+        "function-calc-no-unspaced-operator": true,
+        "function-comma-newline-after": "never-multi-line",
+        "function-comma-newline-before": "never-multi-line",
+        "function-comma-space-after": "always",
+        "function-comma-space-before": "never",
+        "function-linear-gradient-no-nonstandard-direction": true,
+        ////"function-parentheses-newline-inside": "always-multi-line",
+        "function-parentheses-space-inside": "never",
+        "function-url-quotes": "double",
+        ////"function-whitelist": string|[],
+        "function-whitespace-after": "always",
 
         "indentation": 4,
 
-        //"max-empty-lines": int,
-        //"max-line-length": int,
+        "max-empty-lines": 2,
+        ////"max-line-length": int,
+
         //"media-feature-colon-space-after": "always"|"never",
         //"media-feature-colon-space-before": "always"|"never",
         //"media-feature-name-no-vendor-prefix": true,
@@ -79,26 +80,32 @@ var config = {
         //"media-query-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
         //"media-query-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
         //"media-query-parentheses-space-inside": "always"|"never",
+
         //"no-browser-hacks": true,
         //"no-duplicate-selectors": true,
         //"no-eol-whitespace": true,
         //"no-invalid-double-slash-comments": true,
         //"no-missing-eof-newline": true,
         //"no-unknown-animations": true,
+
         //"number-leading-zero": "always"|"never",
         //"number-max-precision": int,
         //"number-no-trailing-zeros": true,
         //"number-zero-length-no-unit": true,
+
         //"property-blacklist": string|[],
         //"property-no-vendor-prefix": true,
         //"property-unit-blacklist": {},
         //"property-unit-whitelist": {},
         //"property-value-blacklist": {},
         //"property-whitelist": string|[],
+
         //"root-no-standard-properties": true,
+
         //"rule-nested-empty-line-before": "always"|"never",
         //"rule-non-nested-empty-line-before": "always"|"never",
         //"rule-properties-order": "alphabetical"|[],
+
         //"selector-class-pattern": string,
         //"selector-combinator-space-after": "always"|"never",
         //"selector-combinator-space-before": "always"|"never",
@@ -116,11 +123,15 @@ var config = {
         //"selector-no-vendor-prefix": true,
         //"selector-pseudo-element-colon-notation": true,
         //"selector-root-no-composition": true,
+
         //"string-no-newline": true,
         //"string-quotes": true,
+
         //"time-no-imperceptible": true,
+
         //"unit-blacklist": string|[],
         //"unit-whitelist": string|[],
+
         //"value-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
         //"value-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
         //"value-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",

@@ -6,7 +6,7 @@ var stylelint = require('stylelint');
 var formatter = require('stylelint-formatter-yhw');
 
 var stylelintOptions = {
-    files: path.resolve(__dirname, './font.scss'),
+    files: path.resolve(__dirname, './max.scss'),
     syntax: "scss",
     formatter: formatter,
     configFile: path.resolve(__dirname, '../', 'index.js')
@@ -19,22 +19,17 @@ function contains(hay, needle) {
 }
 
 
-test('font', function (t) {
+test('TEST', function (t) {
     stylelint.lint(stylelintOptions)
         .then(function (data){
 
             t.comment('\n');
-            t.comment('font:');
+            t.comment('max:');
             t.comment('--------------------------------------------');
 
             t.ok(
-                contains(data.output, 'font-family-name-quotes') === 3,
-                'font-family-name-quotes'
-            );
-
-            t.ok(
-                contains(data.output, 'font-weight-notation') === 1,
-                'font-weight-notation'
+                contains(data.output, 'max-empty-lines') === 2,
+                'max-empty-lines'
             );
         })
         .catch(function (err) {
