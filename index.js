@@ -48,8 +48,9 @@ var config = {
         "declaration-colon-space-before": "never",
         ////"declaration-no-important": true,
 
-        //"font-family-name-quotes": "single-where-required"|"single-where-recommended"|"single-unless-keyword"|"double-where-required"|"double-where-recommended"|"double-unless-keyword",
-        //"font-weight-notation": "numeric"|"named",
+        "font-family-name-quotes": "single-where-recommended",
+        "font-weight-notation": "named",
+
         //"function-blacklist": string|[],
         //"function-calc-no-unspaced-operator": true,
         //"function-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
@@ -62,7 +63,9 @@ var config = {
         //"function-url-quotes": "single"|"double"|"none",
         //"function-whitelist": string|[],
         //"function-whitespace-after": "always"|"never",
-        //"indentation": int|"tab",
+
+        "indentation": 4,
+
         //"max-empty-lines": int,
         //"max-line-length": int,
         //"media-feature-colon-space-after": "always"|"never",

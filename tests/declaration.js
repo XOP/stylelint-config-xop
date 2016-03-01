@@ -27,9 +27,6 @@ test('declaration', function (t) {
             t.comment('declaration:');
             t.comment('--------------------------------------------');
 
-            console.log(data.output);
-
-
             t.ok(
                 contains(data.output, 'declaration-bang-space-after') === 1,
                 'declaration-bang-space-after'

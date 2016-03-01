@@ -1,0 +1,18 @@
+@import "vars-mixins";
+
+
+// YES
+// -------------------------------------------------------
+
+.article {
+    font-family: 'Times New Roman', Helvetica, sans-serif;
+    font-weight: bold;
+}
+
+// NO
+// -------------------------------------------------------
+
+.section {
+    font-family: 'Times New Roman', 'Helvetica', 'sans-serif';
+    font-weight: 700;
+}
