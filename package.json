@@ -6,8 +6,10 @@
     "test": "tests"
   },
   "scripts": {
+    "config": "node utils/config.js",
     "test": "node tests",
-    "lint": "node tests/syntax-formatting.js"
+    "prelint": "npm run config",
+    "lint": "node utils/lint.js --files examples/*.scss"
   },
   "repository": {
     "type": "git",
@@ -26,12 +28,8 @@
   },
   "homepage": "https://github.com/XOP/stylelint-config-xop#readme",
   "devDependencies": {
-    "node-sass": "^3.4.2",
     "stylelint": "^4.4.0",
     "stylelint-formatter-yhw": "^1.1.0",
     "tape": "^4.4.0"
-  },
-  "dependencies": {
-    "stylelint-config-standard": "^3.0.0"
   }
 }

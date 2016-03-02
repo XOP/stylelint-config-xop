@@ -100,7 +100,9 @@ var config = {
 
         "root-no-standard-properties": true,
 
-        "rule-nested-empty-line-before": "never",
+        "rule-nested-empty-line-before": ["always", {
+            except: ["first-nested"]
+        }],
         "rule-no-duplicate-properties": true,
         "rule-no-shorthand-property-overrides": true,
         "rule-non-nested-empty-line-before": "always",

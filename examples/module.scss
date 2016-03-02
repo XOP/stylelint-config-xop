@@ -1,0 +1,111 @@
+/* Module
+---------------------------------------------------------------------------------- */
+
+@import "./mixins";
+
+/*
+cssg
+
+	module
+	    module__logo
+	        <Logo>
+
+	    module__link-list
+	        module__link-item +
+                module-link-a
+
+*/
+
+/* Layout
+-------------------------------------------------- */
+
+.module {
+    background: #fff;
+    color: #000;
+}
+
+.module__content {
+    padding: 1rem;
+    font-size: 1.2rem;
+
+    @media screen and (min-width: 550px) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        padding: 0 1rem;
+    }
+}
+
+/* /Layout
+-------------------------------------------------- */
+
+
+/* List
+-------------------------------------------------- */
+
+/* Items */
+
+.module__link-list {
+    // @include some-mixin();
+
+    @media screen and (min-width: 750px) {
+        display: flex;
+        flex-flow: row;
+        flex: 1 1 auto;
+        align-self: center;
+
+        max-width: 80%;
+    }
+
+    @media screen and (min-width: 550px) {
+        max-width: 60%;
+    }
+}
+
+.module__link-item {
+    display: block;
+    text-align: center;
+
+    @media screen and (min-width: 750px) {
+        flex: 1 0 auto;
+    }
+}
+
+/* /Items */
+
+
+/* Link */
+
+.module__link-a {
+    color: #666;
+
+    &:hover,
+    &:focus {
+        color: #666;
+    }
+}
+
+/* /Link */
+
+/* /List
+-------------------------------------------------- */
+
+
+/* Logo
+-------------------------------------------------- */
+
+.module__logo {
+    display: none;
+
+    @media screen and (min-width: 750px) {
+        display: block;
+        flex: 0 1 auto;
+    }
+}
+
+/* /Logo
+-------------------------------------------------- */
+
+/* /Module
+---------------------------------------------------------------------------------- */
