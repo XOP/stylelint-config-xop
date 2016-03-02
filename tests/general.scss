@@ -1,20 +1,17 @@
-@import "vars-mixins";
-
-
 // YES
 // -------------------------------------------------------
 
 div {
-    color: $color;
+    color: #000;
 }
 
 // YES
 // -------------------------------------------------------
 
 .elem {
-    color: $color;
+    color: #000;
 
-    background: $bg-color;
+    background: #eaa;
 }
 
 
@@ -32,7 +29,7 @@ hr {
 // -------------------------------------------------------
 
 .element {
-    color: $color;
+    color: #eee;
 
     .element {
         background: #000;
@@ -40,7 +37,7 @@ hr {
 }
 
 .element + .element {
-    background: $bg-color;
+    background: #abc;
 }
 
 // YES
@@ -54,25 +51,25 @@ hr {
 // -------------------------------------------------------
 
 main {
-  background: $bg-color;
+  background: #eee;
 }
 
 // NO
 // -------------------------------------------------------
 
 section {
-background: $bg-color;
+background: #eee;
 }
 
 // NO
 // -------------------------------------------------------
 
 a {
-    color: $color;
+    color: #000;
 
 
 
-    background: $bg-color;
+    background: #fff;
 }
 
 // NO
@@ -98,12 +95,12 @@ code {
 // -------------------------------------------------------
 
 .element {
-    color: $color;
+    color: #fff;
 }
 
 .element,
 .other-element {
-    background: $bg-color;
+    background: #fff;
 }
 
 // NO

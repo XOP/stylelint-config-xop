@@ -22,8 +22,6 @@ test(TEST_NAME, function (t) {
 
             helpers.title(TEST_NAME);
 
-            helpers.debug(data);
-
             t.ok(
                 helpers.contains(data.output, ' (indentation)') === 2, // tricky here due to naming
                 'indentation'

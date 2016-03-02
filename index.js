@@ -87,10 +87,10 @@ var config = {
         "no-missing-eof-newline": true,
         "no-unknown-animations": true,
 
-        //"number-leading-zero": "always"|"never",
-        //"number-max-precision": int,
-        //"number-no-trailing-zeros": true,
-        //"number-zero-length-no-unit": true,
+        "number-leading-zero": "never",
+        "number-max-precision": 2,
+        "number-no-trailing-zeros": true,
+        "number-zero-length-no-unit": true,
 
         //"property-blacklist": string|[],
         //"property-no-vendor-prefix": true,

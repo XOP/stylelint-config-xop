@@ -1,7 +1,6 @@
-var TEST_NAME = 'color';
+var TEST_NAME = 'number';
 
 var path = require('path');
-var fs = require('fs');
 
 var test = require('tape');
 var helpers = require('./_helpers');
@@ -24,23 +23,23 @@ test(TEST_NAME, function (t) {
             helpers.title(TEST_NAME);
 
             t.ok(
-                helpers.contains(data.output, 'color-hex-case') === 1,
-                'color-hex-case'
+                helpers.contains(data.output, 'number-leading-zero') === 1,
+                'number-leading-zero'
             );
 
             t.ok(
-                helpers.contains(data.output, 'color-hex-length') === 1,
-                'color-hex-length'
+                helpers.contains(data.output, 'number-max-precision') === 1,
+                'number-max-precision'
             );
 
             t.ok(
-                helpers.contains(data.output, 'color-no-named') === 1,
-                'color-no-named'
+                helpers.contains(data.output, 'number-no-trailing-zeros') === 1,
+                'number-no-trailing-zeros'
             );
 
             t.ok(
-                helpers.contains(data.output, 'color-no-invalid-hex') === 2,
-                'color-no-invalid-hex'
+                helpers.contains(data.output, 'number-zero-length-no-unit') === 1,
+                'number-zero-length-no-unit'
             );
         })
         .catch(function (err) {
