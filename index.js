@@ -1,6 +1,4 @@
 var config = {
-    //"extends": "stylelint-config-standard",
-
     "rules": {
         "at-rule-empty-line-before": [ "always", {
             except: [ "blockless-group", "first-nested" ],
@@ -92,18 +90,22 @@ var config = {
         "number-no-trailing-zeros": true,
         "number-zero-length-no-unit": true,
 
-        //"property-blacklist": string|[],
-        //"property-no-vendor-prefix": true,
-        //"property-unit-blacklist": {},
-        //"property-unit-whitelist": {},
-        //"property-value-blacklist": {},
-        //"property-whitelist": string|[],
+        ////"property-blacklist": [],
+        "property-no-vendor-prefix": true,
+        ////"property-unit-blacklist": {},
+        ////"property-unit-whitelist": {},
+        ////"property-value-blacklist": {},
+        ////"property-value-whitelist": {},
+        ////"property-whitelist": [],
 
-        //"root-no-standard-properties": true,
+        "root-no-standard-properties": true,
 
         //"rule-nested-empty-line-before": "always"|"never",
+        //"rule-no-duplicate-properties": "",
+        //"rule-no-shorthand-property-overrides": "",
         //"rule-non-nested-empty-line-before": "always"|"never",
         //"rule-properties-order": "alphabetical"|[],
+        //"rule-trailing-semicolon": "",
 
         //"selector-class-pattern": string,
         //"selector-combinator-space-after": "always"|"never",

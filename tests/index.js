@@ -8,5 +8,7 @@ require('./declaration');
 require('./font');
 require('./function');
 require('./number');
+require('./property');
+require('./root');
 // require('./string'); fixme: not working properly
 require('./time');

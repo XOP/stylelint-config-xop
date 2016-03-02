@@ -1,8 +1,14 @@
 // YES
 // -------------------------------------------------------
 
-
+div {
+    user-select: none;
+    -webkit-font-smoothing: none; /* stylelint-disable-line */
+}
 
 // NO
 // -------------------------------------------------------
 
+section {
+    -moz-user-select: none;
+}
