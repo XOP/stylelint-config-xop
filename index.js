@@ -107,23 +107,22 @@ var config = {
         //TODO "rule-properties-order": [],
         "rule-trailing-semicolon": "always",
 
-        //"selector-class-pattern": string,
-        //"selector-combinator-space-after": "always"|"never",
-        //"selector-combinator-space-before": "always"|"never",
-        //"selector-id-pattern": string,
-        //"selector-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
-        //"selector-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
-        //"selector-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
-        //"selector-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-        //"selector-max-specificity": string,
-        //"selector-no-attribute": true,
-        //"selector-no-combinator": true,
-        //"selector-no-id": true,
-        //"selector-no-type": true,
-        //"selector-no-universal": true,
-        //"selector-no-vendor-prefix": true,
-        //"selector-pseudo-element-colon-notation": true,
-        //"selector-root-no-composition": true,
+        //TODO"selector-class-pattern": string,
+        "selector-combinator-space-after": "always",
+        "selector-combinator-space-before": "always",
+        ////"selector-id-pattern": string,
+        "selector-list-comma-newline-after": "always",
+        "selector-list-comma-newline-before": "never-multi-line",
+        ////"selector-list-comma-space-after": "always",
+        "selector-list-comma-space-before": "never",
+        ////"selector-no-attribute": true,
+        ////"selector-no-combinator": true,
+        "selector-no-id": true,
+        "selector-no-type": true,
+        "selector-no-universal": true,
+        "selector-no-vendor-prefix": true,
+        "selector-pseudo-element-colon-notation": "single",
+        "selector-root-no-composition": true,
 
         "string-quotes": "double",
 
@@ -132,11 +131,11 @@ var config = {
         ////"unit-blacklist": [],
         ////"unit-whitelist": ["%", "deg", "em", "px", "rem", "s", "vh", "vw"],
 
-        //"value-list-comma-newline-after": "always"|"always-multi-line"|"never-multi-line",
-        //"value-list-comma-newline-before": "always"|"always-multi-line"|"never-multi-line",
-        //"value-list-comma-space-after": "always"|"never"|"always-single-line"|"never-single-line",
-        //"value-list-comma-space-before": "always"|"never"|"always-single-line"|"never-single-line",
-        //"value-no-vendor-prefix": true
+        "value-list-comma-newline-after": "always-multi-line",
+        "value-list-comma-newline-before": "never-multi-line",
+        "value-list-comma-space-after": "always-single-line",
+        "value-list-comma-space-before": "never",
+        "value-no-vendor-prefix": true
     }
 };
 

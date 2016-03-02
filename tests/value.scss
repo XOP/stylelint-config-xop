@@ -1,0 +1,61 @@
+// YES
+// -------------------------------------------------------
+
+section {
+    transition: background .3s;
+}
+
+a {
+    transition:
+        background .3s,
+        opacity .15s;
+}
+
+// YES
+// -------------------------------------------------------
+
+main {
+    background-size: 0, 0;
+}
+
+// YES
+// -------------------------------------------------------
+
+/* stylelint-disable */
+
+.element {
+    display: flex;
+}
+
+/* stylelint-enable */
+
+// NO
+// -------------------------------------------------------
+
+span {
+    transition:
+        background .3s
+        , opacity .15s;
+}
+
+// NO
+// -------------------------------------------------------
+
+span {
+    background-size: 0,0;
+}
+
+// NO
+// -------------------------------------------------------
+
+span {
+    background-size: 0 ,0;
+}
+
+// NO
+// -------------------------------------------------------
+
+span {
+    display: -webkit-flex;
+    display: flex;
+}

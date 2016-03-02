@@ -11,6 +11,8 @@ require('./number');
 require('./property');
 require('./root');
 require('./rule');
-require('./rule-order'); // actually 'rule-properties-order'
+// require('./rule-order'); todo actually 'rule-properties-order'
+require('./selector');
 // require('./string'); fixme: not working properly
 require('./time');
+require('./value');
