@@ -100,12 +100,12 @@ var config = {
 
         "root-no-standard-properties": true,
 
-        //"rule-nested-empty-line-before": "always"|"never",
-        //"rule-no-duplicate-properties": "",
-        //"rule-no-shorthand-property-overrides": "",
-        //"rule-non-nested-empty-line-before": "always"|"never",
-        //"rule-properties-order": "alphabetical"|[],
-        //"rule-trailing-semicolon": "",
+        "rule-nested-empty-line-before": "never",
+        "rule-no-duplicate-properties": true,
+        "rule-no-shorthand-property-overrides": true,
+        "rule-non-nested-empty-line-before": "always",
+        //TODO "rule-properties-order": [],
+        "rule-trailing-semicolon": "always",
 
         //"selector-class-pattern": string,
         //"selector-combinator-space-after": "always"|"never",

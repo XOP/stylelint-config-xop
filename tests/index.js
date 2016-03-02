@@ -10,5 +10,7 @@ require('./function');
 require('./number');
 require('./property');
 require('./root');
+require('./rule');
+require('./rule-order'); // actually 'rule-properties-order'
 // require('./string'); fixme: not working properly
 require('./time');
