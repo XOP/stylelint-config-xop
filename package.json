@@ -1,6 +1,6 @@
 {
   "name": "stylelint-config-xop",
-  "version": "0.0.3",
+  "version": "0.9.0",
   "description": "shareable stylelint configuration",
   "directories": {
     "test": "tests"
