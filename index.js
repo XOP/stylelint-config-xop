@@ -110,7 +110,7 @@ var config = {
         //TODO "rule-properties-order": [],
         "rule-trailing-semicolon": "always",
 
-        //TODO"selector-class-pattern": string,
+        "selector-class-pattern": "^[a-z0-9]+(((-){1,2})?((__){1})?[a-z0-9]+)*$",
         "selector-combinator-space-after": "always",
         "selector-combinator-space-before": "always",
         ////"selector-id-pattern": string,

@@ -23,6 +23,11 @@ test(TEST_NAME, function (t) {
             helpers.title(TEST_NAME);
 
             t.ok(
+                helpers.contains(data.output, 'selector-class-pattern') === 5,
+                'selector-class-pattern'
+            );
+
+            t.ok(
                 helpers.contains(data.output, 'selector-combinator-space-after') === 1,
                 'selector-combinator-space-after'
             );

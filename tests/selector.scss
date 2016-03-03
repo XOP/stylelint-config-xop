@@ -1,6 +1,61 @@
 // YES
 // -------------------------------------------------------
 
+.element {
+    display: block;
+}
+
+.element-2 {
+    display: block;
+}
+
+.element-name {
+    display: block;
+}
+
+.element--mod {
+    display: block;
+}
+
+.element--mod-name {
+    display: block;
+}
+
+.element__child {
+    display: block;
+}
+
+.element__child-name {
+    display: block;
+}
+
+.element__child__grandchild {
+    display: block;
+}
+
+.element__child__grandchild-name {
+    display: block;
+}
+
+.element--type-foo {
+    display: block;
+}
+
+.element--type-foo-bar {
+    display: block;
+}
+
+.element__child__grandchild-name {
+    .element--type-foo-bar {
+        .element-2 {
+            display: block;
+        }
+    }
+}
+
+// YES
+// -------------------------------------------------------
+
 .link + .section {
     margin: 0;
 }
@@ -122,9 +177,32 @@ ul > li {
     };
 }
 
-// NOs
+// NO
 // -------------------------------------------------------
 
 :root > .section {
     position: relative;
+}
+
+// NO
+// -------------------------------------------------------
+
+.elementCamelcase {
+    display: block;
+}
+
+.element_child {
+    display: block;
+}
+
+.element_child_grandchild {
+    display: block;
+}
+
+.element---mod {
+    display: block;
+}
+
+.element_--mod {
+    display: block;
 }
