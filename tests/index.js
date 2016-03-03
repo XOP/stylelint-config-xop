@@ -7,6 +7,7 @@ require('./comment');
 require('./declaration');
 require('./font');
 require('./function');
+require('./media');
 require('./number');
 require('./property');
 require('./root');

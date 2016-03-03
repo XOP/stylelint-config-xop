@@ -1,0 +1,123 @@
+// YES
+// -------------------------------------------------------
+
+@media (max-width: 600px) {
+    div {
+        display: block;
+    }
+}
+
+// YES
+// -------------------------------------------------------
+
+@media (max-width >= 600px) {
+    .logo {
+        display: none;
+    }
+}
+
+// YES
+// -------------------------------------------------------
+
+@media screen and (color), print and (color) {
+    background: #fff;
+}
+
+@media screen and (color),
+print and (color) {
+    background: #fff;
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (max-width:600px) {
+    div {
+        display: block;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (max-width : 600px) {
+    div {
+        display: block;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (-o-min-device-pixel-ratio: 1/1) {
+    div {
+        display: block;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (min-width 1000px) {
+    div {
+        display: flex;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (max-width>= 600px) {
+    .logo {
+        display: none;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media (max-width >=600px) {
+    .logo {
+        display: none;
+    }
+}
+
+// NO
+// -------------------------------------------------------
+
+@media screen and (color)
+, print and (color) {
+    background: #fff;
+}
+
+// NO
+// -------------------------------------------------------
+
+@media screen and (color)
+,
+print and (color) {
+    background: #fff;
+}
+
+// NO
+// -------------------------------------------------------
+
+@media screen and (color),print and (color) {
+    background: #000;
+}
+
+// NO
+// -------------------------------------------------------
+
+@media screen and (color) ,print and (color) {
+    background: #666;
+}
+
+// NO
+// -------------------------------------------------------
+
+@media screen and ( max-width: 800px ) {
+    .foo {
+        position: absolute;
+    }
+}
