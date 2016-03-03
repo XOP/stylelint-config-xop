@@ -6,12 +6,9 @@ var formatter = require('stylelint-formatter-yhw');
 var args = process.argv;
 var files = args[2] === '--files' && args[3] ? args[3] : 'examples/module.scss';
 var filesPath = path.resolve(__dirname, '../', files);
-var configPath = path.resolve(__dirname, '../', 'config.json');
-var config = require(configPath);
 
 var stylelintOptions = {
     files: filesPath,
-    config: config,
     syntax: 'scss'
 };
 

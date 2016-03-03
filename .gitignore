@@ -6,7 +6,7 @@
 # static
 /build
 /public
-/config.json
+/.stylelintrc
 
 
 # deps

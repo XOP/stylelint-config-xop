@@ -6,4 +6,4 @@ var projectPath = path.resolve(__dirname, '../');
 var config = require(path.resolve(projectPath, 'index.js'));
 var configJSON = JSON.stringify(config);
 
-fs.writeFileSync('config.json', configJSON, 'utf8');
+fs.writeFileSync('.stylelintrc', configJSON, 'utf8');
