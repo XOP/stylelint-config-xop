@@ -107,7 +107,111 @@ var config = {
         "rule-no-duplicate-properties": true,
         "rule-no-shorthand-property-overrides": true,
         "rule-non-nested-empty-line-before": "always",
-        //TODO "rule-properties-order": [],
+        "rule-properties-order": [
+            // not working yet
+            //{
+            //    order: "strict",
+            //    properties: [
+            //        "@include",
+            //    ],
+            //},
+
+            "content",
+            {
+                emptyLineBefore: "always",
+                properties: [
+                    "position",
+                ],
+            },
+            {
+                order: "flexible",
+                properties: [
+                    "top",
+                    "bottom",
+                    "left",
+                    "right",
+                ],
+            },
+            "z-index",
+            {
+                order: "strict",
+                emptyLineBefore: "always",
+                properties: [
+                    "display",
+                    "vertical-align",
+                ],
+            },
+            {
+                order: "flexible",
+                emptyLineBefore: "always",
+                properties: [
+                    "flex",
+                    "justify",
+                    "align",
+                ],
+            },
+            {
+                order: "flexible",
+                properties: [
+                    "width",
+                    "height",
+                    "min-width",
+                    "max-width",
+                    "min-height",
+                    "max-height",
+                    "overflow",
+                ],
+            },
+            {
+                order: "flexible",
+                properties: [
+                    "margin",
+                    "padding",
+                ],
+            },
+            {
+                order: "flexible",
+                properties: [
+                    "border",
+                    "background",
+                ],
+            },
+            {
+                order: "flexible",
+                properties: [
+                    "font",
+                    "color",
+                    "line-height",
+                    "text",
+                ],
+            },
+            {
+                order: "flexible",
+                emptyLineBefore: "always",
+                properties: [
+                    "opacity",
+                    "visibility",
+                ],
+            },
+            {
+                order: "flexible",
+                emptyLineBefore: "always",
+                properties: [
+                    "transition",
+                    "transform",
+                    "animation",
+                ],
+            },
+
+            // not working yet
+            //{
+            //    order: "strict",
+            //    emptyLineBefore: "always",
+            //    properties: [
+            //        "media",
+            //    ],
+            //},
+        ],
         "rule-trailing-semicolon": "always",
 
         "selector-class-pattern": "^[a-z0-9]+(((-){1,2})?((__){1})?[a-z0-9]+)*$",

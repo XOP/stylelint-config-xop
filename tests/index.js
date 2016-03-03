@@ -12,7 +12,7 @@ require('./number');
 require('./property');
 require('./root');
 require('./rule');
-// require('./rule-order'); todo actually 'rule-properties-order'
+require('./rule-order');
 require('./selector');
 // require('./string'); fixme: not working properly
 require('./time');

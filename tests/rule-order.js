@@ -22,12 +22,10 @@ test(TEST_NAME, function (t) {
 
             helpers.title(TEST_NAME);
 
-            helpers.debug(data);
-
-            //t.ok(
-            //    helpers.contains(data.output, 'rule-properties-order') === 2,
-            //    'rule-properties-order'
-            //);
+            t.ok(
+                helpers.contains(data.output, 'rule-properties-order') === null,
+                'rule-properties-order'
+            );
         })
         .catch(function (err) {
             console.error(err.stack);
