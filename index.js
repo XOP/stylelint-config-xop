@@ -174,6 +174,7 @@ var config = {
                 order: "flexible",
                 properties: [
                     "border",
+                    "outline",
                     "background",
                 ],
             },
