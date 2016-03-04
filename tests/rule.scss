@@ -7,6 +7,21 @@ div {
     }
 }
 
+div {
+    a {
+        color: #bbb;
+    }
+
+    b {
+        font-weight: normal;
+    }
+
+    // comment line
+    code {
+        white-space: pre;
+    }
+}
+
 @media {
     div {
         margin: 0;
@@ -28,6 +43,20 @@ section {
 
     a {
         color: #bbb;
+    }
+}
+
+article {
+    .foo {
+        color: #333;
+    }
+    /* comment line */
+    .bar {
+        background: #000;
+    }
+    // comment line
+    .bar {
+        background: #000;
     }
 }
 

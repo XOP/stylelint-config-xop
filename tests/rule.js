@@ -22,6 +22,8 @@ test(TEST_NAME, function (t) {
 
             helpers.title(TEST_NAME);
 
+            // fixme: should be '3'
+            // todo: custom rule involving inline comment
             t.ok(
                 helpers.contains(data.output, 'rule-nested-empty-line-before') === 2,
                 'rule-nested-empty-line-before'
