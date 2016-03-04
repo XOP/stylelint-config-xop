@@ -107,7 +107,9 @@ var config = {
         }],
         "rule-no-duplicate-properties": true,
         "rule-no-shorthand-property-overrides": true,
-        "rule-non-nested-empty-line-before": "always",
+        "rule-non-nested-empty-line-before": ["always", {
+            ignore: ["after-comment"]
+        }],
         "rule-properties-order": [
             // not working yet
             //{
