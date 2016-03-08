@@ -44,9 +44,3 @@ $ npm run lint
 
 
 ## [License (MIT)](LICENSE)
-
-
-## Known issues
-
-Apparently, there are differences in node and CLI mechanisms -  
-currently ([version 4.4.0](https://github.com/stylelint/stylelint/releases/tag/4.4.0)) CLI implementation is not stable, so in order to produce correct results better use [node API](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/node-api.md).
