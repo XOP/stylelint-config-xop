@@ -182,11 +182,14 @@ var config = {
             },
             {
                 order: "flexible",
+                emptyLineBefore: "always",
                 properties: [
                     "font",
                     "color",
                     "line-height",
                     "text",
+                    "white-space",
+                    "word",
                 ],
             },
             {

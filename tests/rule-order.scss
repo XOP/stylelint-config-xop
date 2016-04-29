@@ -50,6 +50,9 @@
     font-weight: normal;
     line-height: 1.5;
     color: #000;
+    word-break: break-all;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
     opacity: 1;
     visibility: visible;
